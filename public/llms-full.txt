@@ -1,0 +1,39 @@
+# Orneco — Full Knowledge Base & Specifications
+
+> Comprehensive product specifications, corporate background, usage guidelines, and customer support details for Orneco Health Care Pvt. Ltd.
+
+## Brand & Manufacturer Information
+- **Manufacturer & Marketer**: Orneco Health Care Pvt. Ltd.
+- **Brand Name**: Orneco™
+- **Tagline**: Premium Tissue, Thoughtfully Made. Pure & Soft.
+- **Manufacturing Origin**: Made in Bharat (India)
+- **Primary Website**: https://orneco.in/
+- **Customer Care Telephone**: +91 72038 55015
+- **Customer Care Email**: ornecoindia@gmail.com
+
+## Detailed Product Specifications
+- **Product Type**: 2-Ply Facial Tissue Box
+- **SKU**: ORN-FT-100P
+- **Net Quantity**: 100 N
+- **Total Sheet Count**: 200 Sheets
+- **Total Pull Count**: 100 Pulls
+- **Ply Count**: 2 Ply
+- **Sheet Dimensions**: 18 cm × 19 cm (Length × Width)
+- **Maximum Retail Price (MRP)**: ₹100/- (inclusive of all taxes)
+- **Item Condition**: New
+- **Availability**: In Stock
+
+## Quality & Dermatological Characteristics
+- **Softness**: Feather-light surface texture designed for sensitive skin and gentle daily touch.
+- **Strength**: Two interlocking plies engineered to maintain structural integrity and resist tearing when wet.
+- **Hygiene Standards**: Produced under strict hygienic controls for personal care, cosmetic touch-ups, makeup removal, and facial cleansing.
+- **Suitability**: Safe for children and adults across all skin types.
+
+## Key Section Links
+- [Hero Overview](https://orneco.in/#top): Brand introduction and primary packaging showcase.
+- [About Orneco](https://orneco.in/#about): Philosophy and product ethos.
+- [Core Benefits](https://orneco.in/#benefits): Deep cleaning, ultra-softness, and gentle everyday skin care.
+- [The Difference](https://orneco.in/#why): Superior softness, durability, hygiene, and elegant packaging.
+- [Inside Every Box](https://orneco.in/#details): Technical specifications and sheet dimensions.
+- [Customer Care & Contact](https://orneco.in/#contact): Direct phone and email contact for orders and queries.
+
