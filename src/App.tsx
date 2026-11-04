@@ -113,6 +113,7 @@ function Nav() {
     ["Benefits", "#benefits"],
     ["Why Orneco", "#why"],
     ["Details", "#details"],
+    ["FAQ", "#faq"],
     ["Contact", "#contact"],
   ];
   return (
@@ -492,6 +493,80 @@ function Details() {
   );
 }
 
+/* ---------- FAQ ---------- */
+function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const faqs = [
+    {
+      q: "Are Orneco tissues suitable for sensitive or allergy-prone skin?",
+      a: "Yes, absolutely. Orneco facial tissues are crafted from 100% selected virgin wood pulp and are completely free from Optical Brightening Agents (OBA), harsh dyes, and chlorine bleach. Their feather-light, ultra-soft texture is hypoallergenic and gentle enough for everyday use on delicate skin, kids, and during cold and allergy seasons.",
+    },
+    {
+      q: "Can these tissues be used for makeup removal and wet face cleansing?",
+      a: "Yes. Our tissues feature an engineered 2-ply bonded construction that provides superior wet strength. Unlike ordinary single-ply tissues that dissolve or shred when wet, Orneco holds together effectively for makeup removal, post-wash dabbing, and skincare routines.",
+    },
+    {
+      q: "What are the exact sheet size, ply, and pull specifications?",
+      a: "Each Orneco facial tissue box contains 100 pulls (200 sheets total) of 2-ply premium tissue. Each individual sheet measures 18 cm × 19 cm, providing generous surface area for comprehensive daily personal care.",
+    },
+    {
+      q: "Are Orneco facial tissues eco-friendly and biodegradable?",
+      a: "Yes. Made from responsibly sourced natural virgin wood pulp fibers, Orneco tissues are 100% biodegradable and recyclable. Our cardboard dispenser boxes are thoughtfully designed to minimize plastic usage.",
+    },
+    {
+      q: "Where are Orneco tissues manufactured, and can I place bulk or distribution orders?",
+      a: "Orneco is proudly Made in Bharat by Orneco Health Care Pvt. Ltd. at our specialized personal care facility in Ahmedabad, Gujarat. For distributor inquiries, corporate gifting, salon, or hotel bulk orders, please contact us at care@orneco.in or call +91 72038 55015.",
+    },
+  ];
+
+  return (
+    <section id="faq" className="py-28 lg:py-36 bg-cream/60 border-t border-sand">
+      <div className="max-w-5xl mx-auto px-6">
+        <Reveal className="text-center max-w-2xl mx-auto mb-16">
+          <p className="text-xs tracking-[0.35em] uppercase text-teal mb-4">Got Questions?</p>
+          <h2 className="font-serif text-5xl lg:text-6xl text-teal-deep leading-tight">
+            Frequently Asked <span className="italic text-teal">Questions</span>
+          </h2>
+          <p className="mt-5 text-teal-deep/70 text-lg">
+            Everything you need to know about Orneco facial tissues, material quality, and everyday care.
+          </p>
+        </Reveal>
+
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIndex === idx;
+            return (
+              <Reveal key={faq.q} delay={idx * 80}>
+                <div className={`rounded-3xl border transition-all duration-300 overflow-hidden ${isOpen ? "bg-white border-teal/40 shadow-lg shadow-teal/5" : "bg-white/60 border-sand hover:border-teal/25"}`}>
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : idx)}
+                    className="w-full py-6 px-8 flex items-center justify-between text-left gap-4"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="font-serif text-xl sm:text-2xl text-teal-deep">
+                      {faq.q}
+                    </span>
+                    <span className={`w-9 h-9 shrink-0 rounded-full grid place-items-center transition-all duration-300 ${isOpen ? "bg-teal text-cream rotate-180" : "bg-teal/10 text-teal"}`}>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <div className="px-8 pb-7 pt-1 text-teal-deep/75 leading-relaxed text-base border-t border-teal/10">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Policy Content ---------- */
 const POLICIES: Record<string, { title: string; content: string[] }> = {
   privacy: {
@@ -650,6 +725,7 @@ export default function App() {
         <Better />
         <Lifestyle />
         <Details />
+        <FAQ />
         <Contact />
       </main>
       <Footer onOpenPolicy={(k) => setActivePolicy(k)} />
