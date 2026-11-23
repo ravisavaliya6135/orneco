@@ -37,20 +37,6 @@ function Wordmark({ light = false, className = "h-8" }: { light?: boolean; class
   );
 }
 
-function Leaf({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 60 100" className={className} fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M30 98C30 70 30 40 30 4" />
-      {[20, 38, 56, 74].map((y, i) => (
-        <g key={i}>
-          <path d={`M30 ${y + 10}c-14-2-22-10-24-22 12 0 22 8 24 22z`} fill="currentColor" fillOpacity=".15" />
-          <path d={`M30 ${y + 4}c14-2 22-10 24-22-12 0-22 8-24 22z`} fill="currentColor" fillOpacity=".15" />
-        </g>
-      ))}
-    </svg>
-  );
-}
-
 /* ---------- Scroll reveal ---------- */
 function useReveal() {
   useEffect(() => {
@@ -168,11 +154,9 @@ function Nav() {
 /* ---------- Hero ---------- */
 function Hero() {
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden leaf-bg pt-32 pb-20 flex items-center">
+    <section id="top" className="relative min-h-screen overflow-hidden pt-32 pb-20 flex items-center">
       {/* giant brand O */}
       <Logo className="absolute -left-40 -top-20 w-[640px] h-[640px] opacity-[0.07] text-teal" />
-      <Leaf className="hidden lg:block absolute top-28 left-[46%] w-16 text-teal/40 animate-sway" />
-      <Leaf className="absolute bottom-10 right-6 w-24 text-teal/30 animate-sway" />
 
       <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center w-full">
         <div>
@@ -386,7 +370,7 @@ function Better() {
     ["Made for Everyday Life", "Home, office, car or travel — always within reach."],
   ];
   return (
-    <section id="why" className="py-28 lg:py-36 leaf-bg">
+    <section id="why" className="py-28 lg:py-36">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12 items-end mb-16">
           <Reveal className="lg:col-span-7">
@@ -630,7 +614,7 @@ function Contact() {
     <section id="contact" className="pb-28 lg:pb-36">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal>
-          <div className="relative rounded-[2.5rem] bg-sand/70 leaf-bg overflow-hidden px-8 py-16 lg:p-20 text-center">
+          <div className="relative rounded-[2.5rem] bg-sand/70 overflow-hidden px-8 py-16 lg:p-20 text-center">
             <Logo className="w-16 h-16 mx-auto text-teal" />
             <p className="text-xs tracking-[0.35em] uppercase text-teal mt-6">Mfg &amp; Mktd by</p>
             <h2 className="font-serif text-4xl lg:text-6xl text-teal-deep mt-3">Orneco Health Care Pvt. Ltd.</h2>
