@@ -1,0 +1,22 @@
+{
+  "name": "Orneco – Premium Facial Tissues",
+  "short_name": "Orneco",
+  "description": "Premium 2-ply facial tissues. Ultra-soft, highly absorbent 100 pulls (200 sheets) crafted for all skin types. Thoughtfully Made in Bharat.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf3",
+  "theme_color": "#4d3780",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo_symbol.png",
+      "sizes": "157x110",
+      "type": "image/png"
+    }
+  ]
+}

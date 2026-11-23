@@ -23,6 +23,8 @@
 
     <!-- Favicon & Brand Theme -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/images/logo_symbol.png" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#4d3780" />
 
     <!-- Open Graph / Facebook -->
@@ -129,6 +131,41 @@
           "@id": "https://orneco.in/#organization"
         }
       }
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://orneco.in/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are Orneco tissues suitable for sensitive or allergy-prone skin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. Orneco facial tissues are crafted from 100% selected virgin wood pulp and are completely free from Optical Brightening Agents (OBA), harsh dyes, and chlorine bleach. Their feather-light, ultra-soft texture is hypoallergenic and gentle enough for everyday use on delicate skin, kids, and during cold and allergy seasons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can these tissues be used for makeup removal and wet face cleansing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Built with robust 2-ply interleaving technology, each sheet retains its structural integrity without disintegrating or leaving lint residue, making it ideal for cosmetics removal, blotting facial oils, and everyday cleansing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many pulls and sheets are included in each box?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each Orneco facial tissue box contains 100 pulls (200 sheets total) of 2-ply premium tissue. Each individual sheet measures 18 cm × 19 cm, providing generous surface area for comprehensive daily personal care."
+          }
+        }
+      ]
     }
     </script>
   </head>

@@ -645,7 +645,7 @@ function Contact() {
 
               <a href="mailto:ornecoindia@gmail.com" className="group bg-cream rounded-3xl p-6 flex items-center gap-4 text-left hover:shadow-xl hover:shadow-teal/10 hover:-translate-y-1 transition">
                 <span className="w-12 h-12 shrink-0 rounded-full bg-teal text-cream grid place-items-center">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </span>
                 <span className="min-w-0">
                   <span className="block text-xs tracking-[0.2em] uppercase text-teal-deep/50">Direct Mail</span>
@@ -655,7 +655,7 @@ function Contact() {
 
               <div className="bg-cream rounded-3xl p-6 flex items-center gap-4 text-left">
                 <span className="w-12 h-12 shrink-0 rounded-full bg-teal text-cream grid place-items-center">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /><circle cx="12" cy="9" r="2.5" /></svg>
                 </span>
                 <span className="min-w-0">
                   <span className="block text-xs tracking-[0.2em] uppercase text-teal-deep/50">Location</span>
@@ -714,6 +714,14 @@ export default function App() {
   useReveal();
   const [activePolicy, setActivePolicy] = useState<string | null>(null);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActivePolicy(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
     <>
       <Nav />
@@ -731,8 +739,17 @@ export default function App() {
       <Footer onOpenPolicy={(k) => setActivePolicy(k)} />
 
       {activePolicy && POLICIES[activePolicy] && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm grid place-items-center p-4">
-          <div className="bg-cream text-teal-deep rounded-3xl max-w-xl w-full p-8 shadow-2xl relative border border-teal/20 animate-float">
+        <div
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm grid place-items-center p-4"
+          onClick={() => setActivePolicy(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={POLICIES[activePolicy].title}
+        >
+          <div
+            className="bg-cream text-teal-deep rounded-3xl max-w-xl w-full p-8 shadow-2xl relative border border-teal/20"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex justify-between items-center mb-6 border-b border-teal/15 pb-4">
               <h3 className="font-serif text-2xl text-teal">{POLICIES[activePolicy].title}</h3>
               <button
