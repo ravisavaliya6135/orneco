@@ -1,5 +1,6 @@
 # Canonical 301 redirect from www to apex domain
-https://www.orneco.in/* https://orneco.in/:splat 301
+https://www.ornecoindia.com/* https://ornecoindia.com/:splat 301
 
 # SPA fallback
 /* /index.html 200
+

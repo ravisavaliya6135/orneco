@@ -515,7 +515,7 @@ function FAQ() {
     },
     {
       q: "Where are Orneco tissues manufactured, and can I place bulk or distribution orders?",
-      a: "Orneco is proudly Made in Bharat by Orneco Health Care Pvt. Ltd. at our specialized personal care facility in Ahmedabad, Gujarat. For distributor inquiries, corporate gifting, salon, or hotel bulk orders, please contact us at care@orneco.in or call +91 72038 55015.",
+      a: "Orneco is proudly Made in Bharat by Orneco Health Care Pvt. Ltd. at our specialized personal care facility in Ahmedabad, Gujarat. For distributor inquiries, corporate gifting, salon, or hotel bulk orders, please contact us at care@ornecoindia.com or call +91 72038 55015.",
     },
   ];
 
@@ -576,7 +576,7 @@ const POLICIES: Record<string, { title: string; content: string[] }> = {
       "1. Information We Collect: When you contact us via telephone or email, we may collect your name, email address, phone number, and enquiry details.",
       "2. Use of Information: We use customer information exclusively to respond to inquiries, process orders, provide customer support, and improve our personal hygiene products.",
       "3. Data Security: We maintain strict operational and administrative safeguards. We never sell, rent, or trade your personal information to third parties.",
-      "4. Contact: For privacy-related queries, reach our Data Officer at care@orneco.in.",
+      "4. Contact: For privacy-related queries, reach our Data Officer at care@ornecoindia.com.",
     ],
   },
   terms: {
@@ -603,7 +603,7 @@ const POLICIES: Record<string, { title: string; content: string[] }> = {
       "Customer satisfaction and hygiene safety are our top priorities at Orneco.",
       "1. Eligibility: Due to the personal hygiene nature of facial tissues, returns are accepted within 7 days of delivery only if the product is damaged in transit or incorrect.",
       "2. Refund Process: Approved refunds are processed to the original payment method within 5–7 business days of inspection.",
-      "3. Support: To request a return or report damaged items, contact care@orneco.in or call +91 72038 55015.",
+      "3. Support: To request a return or report damaged items, contact care@ornecoindia.com or call +91 72038 55015.",
     ],
   },
 };
@@ -633,13 +633,13 @@ function Contact() {
                 </span>
               </a>
 
-              <a href="mailto:care@orneco.in" className="group bg-cream rounded-3xl p-6 flex items-center gap-4 text-left hover:shadow-xl hover:shadow-teal/10 hover:-translate-y-1 transition">
+              <a href="mailto:care@ornecoindia.com" className="group bg-cream rounded-3xl p-6 flex items-center gap-4 text-left hover:shadow-xl hover:shadow-teal/10 hover:-translate-y-1 transition">
                 <span className="w-12 h-12 shrink-0 rounded-full bg-teal text-cream grid place-items-center">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
                 </span>
                 <span className="min-w-0">
                   <span className="block text-xs tracking-[0.2em] uppercase text-teal-deep/50">Corporate Email</span>
-                  <span className="block font-medium text-base group-hover:text-teal transition truncate">care@orneco.in</span>
+                  <span className="block font-medium text-base group-hover:text-teal transition truncate">care@ornecoindia.com</span>
                 </span>
               </a>
 

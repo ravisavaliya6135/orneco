@@ -20,4 +20,4 @@ User-agent: Google-Extended
 Allow: /
 
 # Sitemap
-Sitemap: https://orneco.in/sitemap.xml
+Sitemap: https://ornecoindia.com/sitemap.xml
